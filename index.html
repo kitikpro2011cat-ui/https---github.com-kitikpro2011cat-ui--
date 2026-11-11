@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Прогноз погоди</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="weather-card">
+      <header class="header">
+        <div class="header-content">
+          <div class="header-top">
+            <h1>Прогноз погоди</h1>
+            <span class="unit">°C</span>
+          </div>
+
+          <div class="search-box">
+            <span aria-hidden="true">🔎</span>
+            <input
+              type="search"
+              aria-label="Назва міста"
+              placeholder="Пошук міста..."
+            />
+          </div>
+
+          <ul class="city-list" aria-label="Міста">
+            <li class="city-btn active">Київ</li>
+            <li class="city-btn">Дніпро</li>
+            <li class="city-btn">Львів</li>
+            <li class="city-btn">Одеса</li>
+            <li class="city-btn">Харків</li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="current-weather" aria-labelledby="city">
+          <div class="current-icon" aria-hidden="true">☀️</div>
+          <h2 class="city" id="city">Київ</h2>
+          <p class="date">Сьогодні, 3 листопада</p>
+          <p class="temperature">18<span>°C</span></p>
+          <p class="condition">Сонячно</p>
+          <p class="feelslike">Відчувається як <strong>18°C</strong></p>
+        </section>
+
+        <section class="forecast-panel" aria-labelledby="forecast-title">
+          <h2 id="forecast-title">Прогноз на 5 днів</h2>
+
+          <ul class="forecast">
+            <li class="day">
+              <span class="day-name">Ср</span>
+              <span class="day-icon" role="img" aria-label="Мінлива хмарність"
+                >🌤</span
+              >
+              <span>19°</span>
+            </li>
+            <li class="day">
+              <span class="day-name">Чт</span>
+              <span class="day-icon" role="img" aria-label="Хмарно">☁️</span>
+              <span>16°</span>
+            </li>
+            <li class="day">
+              <span class="day-name">Пт</span>
+              <span class="day-icon" role="img" aria-label="Хмарно">☁️</span>
+              <span>14°</span>
+            </li>
+            <li class="day">
+              <span class="day-name">Сб</span>
+              <span class="day-icon" role="img" aria-label="Дощ">🌧</span>
+              <span>13°</span>
+            </li>
+            <li class="day">
+              <span class="day-name">Нд</span>
+              <span class="day-icon" role="img" aria-label="Сонячно">☀️</span>
+              <span>17°</span>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

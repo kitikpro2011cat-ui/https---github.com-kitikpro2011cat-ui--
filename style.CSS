@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: #050817;
+    color: white;
+    font: 15px Arial, sans-serif;
+}
+
+.weather-card {
+    width: 500px;
+    max-width: 100%;
+    padding: 24px;
+    border: 1px solid #1b2337;
+    border-radius: 24px;
+    background: #101628;
+}
+
+/* Шапка */
+
+.header-top,
+.search-box,
+.city-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-top {
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.header-top h1,
+.forecast-panel h2 {
+    margin: 0;
+    color: #aebbd0;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.unit,
+.city-btn,
+.condition {
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #202b3d;
+}
+
+.search-box {
+    padding: 10px 14px;
+    border-radius: 20px;
+    background: #090f20;
+}
+
+.search-box input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
+    color: white;
+}
+
+.search-box input::placeholder {
+    color: #eaedf1;
+}
+
+.city-list,
+.forecast {
+    padding: 0;
+    list-style: none;
+}
+
+.city-list {
+    flex-wrap: wrap;
+    margin: 14px 0 0;
+}
+
+.city-btn {
+    font-size: 14px;
+}
+
+.city-btn.active {
+    background: #5745ed;
+}
+
+/* Поточна погода */
+
+.current-weather,
+.forecast-panel {
+    text-align: center;
+}
+
+.current-weather {
+    padding: 24px 0;
+}
+
+.current-icon {
+    font-size: 64px;
+    line-height: 1.15;
+}
+
+.city {
+    margin: 8px 0 5px;
+    font-size: 28px;
+}
+
+.date,
+.feelslike {
+    margin: 0;
+    color: #aebbd0;
+}
+
+.temperature {
+    margin: 10px 0;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.temperature span {
+    margin-left: 3px;
+    color: #aebbd0;
+    font-size: 24px;
+    vertical-align: super;
+}
+
+.condition {
+    display: inline-block;
+    margin: 0 0 8px;
+    background: #201d46;
+    color: #c2bdff;
+}
+
+/* Прогноз на 5 днів */
+
+.forecast-panel {
+    padding-top: 14px;
+    border-top: 1px solid #25304a;
+}
+
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+    margin: 12px 0 0;
+}
+
+.day {
+    display: grid;
+    gap: 5px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background: #090f20;
+    font-size: 14px;
+}
+
+.day-name {
+    color: #aebbd0;
+}
+
+.day-icon {
+    font-size: 20px;
+}
